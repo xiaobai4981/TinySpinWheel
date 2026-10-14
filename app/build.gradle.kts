@@ -1,17 +1,19 @@
+import java.io.FileInputStream
+import java.util.Properties
 plugins {
     alias(libs.plugins.android.application)
 }
 
 android {
     namespace = "evil.spin"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "evil.spin"
+        applicationId = "com.zefu.tinyspinwheel"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 103
-        versionName = "1.0.3"
+        targetSdk = 36
+        versionCode = 1
+        versionName = "1.0"
     }
 
     dependenciesInfo {
@@ -20,6 +22,21 @@ android {
         // Disables dependency metadata when building Android App Bundles.
         includeInBundle = false
     }
+
+    signingConfigs {
+        val keystorePropertiesFile = rootProject.file("keystore.properties")
+        val keystoreProperties = Properties()
+
+        keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+
+        create("basic") {
+            storeFile = rootProject.file(keystoreProperties.getProperty("storeFile"))
+            storePassword = keystoreProperties.getProperty("storePassword")
+            keyAlias = keystoreProperties.getProperty("keyAlias")
+            keyPassword = keystoreProperties.getProperty("keyPassword")
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -27,6 +44,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("basic")
         }
     }
     compileOptions {

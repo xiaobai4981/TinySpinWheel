@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Evil Spin"
+rootProject.name = "TinySpinWheel"
 include(":app")
  

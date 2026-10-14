@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Evil Spin</string>
+    <string name="app_name">Tiny Spin Wheel</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -42,5 +42,17 @@
         sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="open_source_notice">
+    This app is based on open-source software
+    licensed under GNU GPL v2.
+    It is provided without warranty.
+    You may redistribute and modify it
+    under the terms of GNU GPL v2.
+    Source code and license:
+    </string>
+
+    <string name="open_source_url">
+    https://github.com/xiaobai4981/TinySpinWheel/issues
     </string>
 </resources>

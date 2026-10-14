@@ -84,12 +84,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateTitle() {
-        String title = sharedPreferences.getString("wheel_title", "Spin the Wheel");
+        String title = sharedPreferences.getString("wheel_title", "Tiny Spin Wheel");
         titleBar.setText(title);
     }
 
     private void updateBackground() {
-        String background = sharedPreferences.getString("background", "red");
+        String background = sharedPreferences.getString("background", "purple");
         setBackgroundByName(background);
     }
     private void setBackgroundByName(String backgroundName) {

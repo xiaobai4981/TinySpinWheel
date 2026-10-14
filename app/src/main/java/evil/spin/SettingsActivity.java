@@ -105,9 +105,9 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void loadSettings() {
-        String title = sharedPreferences.getString("wheel_title", "Spin the Wheel");
+        String title = sharedPreferences.getString("wheel_title", "Tiny Spin Wheel");
         String colorPalette = sharedPreferences.getString("color_palette", "Default");
-        String background = sharedPreferences.getString("background", "red");
+        String background = sharedPreferences.getString("background", "purple");
         int wheelSpeed = sharedPreferences.getInt("wheel_speed", 3000);
         int minWheelSpin = sharedPreferences.getInt("min_wheel_spin", 720);
 
